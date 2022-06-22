@@ -30,7 +30,7 @@ body{
 }
 .container{
     height: 85vh;
-    background-image: url("/Project11_Spotify_Clone/1101614.jpg");
+    background-image: url("1101614.jpg");
     background-size: cover;
     display: flex;
     flex-direction: column;
