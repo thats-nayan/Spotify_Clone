@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+body{
+    background-color: wheat;
+    font-family: 'Baloo Paaji 2', cursive;
+}
+.navbar{
+    display: flex;
+    background-color: black;
+    align-items: center;
+}
+.home a
+{
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+    margin: 1vw;
+    text-decoration: none;
+}
+.home a:hover{
+    color: black;
+    background-color: white;
+    border-radius: 13px;
+}
+.logo img{
+    height: 8vh;
+}
+.container{
+    height: 85vh;
+    background-image: url("/Project11_Spotify_Clone/1101614.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 23px auto;
+    border-radius: 12px;
+}
+.container h1{
+    color: white;
+    margin: 23px;
+}
+.bottom
+{
+    position: sticky;
+    background-color: black;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icons img{
+    width: 40px;
+    color: white;
+    filter: invert();
+    cursor: pointer;
+    margin: 0px 11px;
+}
+.progress
+{
+    padding: 13px;
+    display: flex;
+    color: white;
+}
+#progressbar{
+    margin: 0px 10px;
+    width: 80vw;
+    cursor: pointer;
+}
+.songs{
+    background-color: white;
+    height: 7vh;
+    width: 30vw;
+    margin: 20px 23px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+.songs img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.gif{
+    display: none;
+}
+.songinfo{
+    color: white;
+    margin: 8px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    display: none;
+}
+@media (max-width : 1000px) {
+    .songs{
+       width: 90%;
+    }
+}
