@@ -3,17 +3,17 @@ console.log("Welcome to Spotify");
 let song_number = 0;
 let start = false;
 let songs = [
-    {songName: "Song 1",filePath : "/Project11_Spotify_Clone/songs/1.mp3" , isliked : false},
-    {songName: "Song 2",filePath : "/Project11_Spotify_Clone/songs/2.mp3" , isliked : false},
-    {songName: "Song 3",filePath : "/Project11_Spotify_Clone/songs/3.mp3" , isliked : false},
-    {songName: "Song 4",filePath : "/Project11_Spotify_Clone/songs/4.mp3" , isliked : false},
-    {songName: "Song 5",filePath : "/Project11_Spotify_Clone/songs/5.mp3" , isliked : false},
-    {songName: "Song 6",filePath : "/Project11_Spotify_Clone/songs/6.mp3" , isliked : false},
-    {songName: "Song 7",filePath : "/Project11_Spotify_Clone/songs/7.mp3" , isliked : false},
+    {songName: "Song 1",filePath : "1.mp3" , isliked : false},
+    {songName: "Song 2",filePath : "2.mp3" , isliked : false},
+    {songName: "Song 3",filePath : "3.mp3" , isliked : false},
+    {songName: "Song 4",filePath : "4.mp3" , isliked : false},
+    {songName: "Song 5",filePath : "5.mp3" , isliked : false},
+    {songName: "Song 6",filePath : "6.mp3" , isliked : false},
+    {songName: "Song 7",filePath : "7.mp3" , isliked : false},
 ]
 let play = document.querySelector("#playicon");
 let gificon = document.querySelectorAll(".gif");
-let curr_song = new Audio("/Project11_Spotify_Clone/songs/1.mp3");
+let curr_song = new Audio("1.mp3");
 let song_info = document.querySelector(".songinfo");
 let progress = document.querySelector("#progressbar");
 
@@ -33,7 +33,7 @@ play.addEventListener("click",function name() {
     if(start == false)
     {
         start = true;
-        play.setAttribute("src","/Project11_Spotify_Clone/16427.png");
+        play.setAttribute("src","16427.png");
         curr_song.play();
         song_info.style.display = "block";
         song_info.innerHTML = "Playing "+ songs[song_number].songName;
@@ -42,7 +42,7 @@ play.addEventListener("click",function name() {
     else
     {
         start = false;
-        play.setAttribute("src","/Project11_Spotify_Clone/play.png");
+        play.setAttribute("src","play.png");
         song_info.style.display = "none";
         curr_song.pause();
         gificon[song_number].style.display = "none";
@@ -59,7 +59,7 @@ for (let i = 0; i < song_list.length; i++) {
         curr_song.pause();
         gificon[song_number].style.display = "none";
         curr_song = new Audio(songs[i].filePath);
-        play.setAttribute("src","/Project11_Spotify_Clone/16427.png");
+        play.setAttribute("src","16427.png");
         song_number = i;
         start = true;
         gificon[song_number].style.display = "block";
@@ -83,7 +83,7 @@ back.addEventListener("click",function () {
         song_number += songs.length;
         song_number %= songs.length;
         curr_song = new Audio(songs[song_number].filePath);
-        play.setAttribute("src","/Project11_Spotify_Clone/16427.png");
+        play.setAttribute("src","16427.png");
         start = true;
         gificon[song_number].style.display = "block";
 
@@ -103,7 +103,7 @@ forward.addEventListener("click",function () {
         song_number++;
         song_number %= songs.length;
         curr_song = new Audio(songs[song_number].filePath);
-        play.setAttribute("src","/Project11_Spotify_Clone/16427.png");
+        play.setAttribute("src","16427.png");
         start = true;
         gificon[song_number].style.display = "block";
 
@@ -122,13 +122,13 @@ for (let i = 0; i < heart.length; i++) {
     heart[i].addEventListener("click",function () {
         if(songs[i].isliked== false)
         {
-            heart[i].setAttribute("src","/Project11_Spotify_Clone/red_heart.png")
+            heart[i].setAttribute("src","red_heart.png")
             songs[i].isliked = true;
         }
         else
         {
             console.log("Nayan");
-            heart[i].setAttribute("src","/Project11_Spotify_Clone/icons8-heart-with-arrow-50.png")
+            heart[i].setAttribute("src","icons8-heart-with-arrow-50.png")
             songs[i].isliked = false;
         }
     });   
